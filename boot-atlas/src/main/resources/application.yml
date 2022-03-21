@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Boot Atlas
+
+graphql:
+  servlet:
+    max-query-depth: 5

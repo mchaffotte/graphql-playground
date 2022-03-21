@@ -1,0 +1,12 @@
+type Query {
+    countries: [Country]
+
+    country(code: ID): Country
+
+    continent(name: String): Continent
+
+    search(name: String): [SearchResult]
+
+}
+
+union SearchResult = Country | Continent

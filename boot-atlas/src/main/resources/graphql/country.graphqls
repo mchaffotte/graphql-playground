@@ -1,0 +1,11 @@
+enum AreaUnit {
+    SQUARE_METER, SQUARE_MILE
+}
+
+type Country {
+    code: ID!
+    name: String!
+    capital: String
+    area(unit: AreaUnit = SQUARE_METER): Int
+}
+
