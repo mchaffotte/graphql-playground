@@ -50,13 +50,13 @@ public class CountryRepository {
         continents.put(asie, List.of());
     }
 
-    public Optional<Continent> getContinent(String name) {
+    public Optional<Continent> getContinent(final String name) {
         return continents.keySet().stream()
                 .filter(continent -> continent.getName().equals(name))
                 .findFirst();
     }
 
-    public List<Country> getCountriesOfContinent(String name, Integer first, Integer offset) {
+    public List<Country> getCountriesOfContinent(final String name, final Integer first, final Integer offset) {
         final List<Country> countries = continents.entrySet().stream()
                 .filter(entry -> entry.getKey().getName().equals(name))
                 .map(Map.Entry::getValue)
@@ -71,18 +71,18 @@ public class CountryRepository {
         return countries;
     }
 
-    public Optional<Country> getCountry(String code) {
+    public Optional<Country> getCountry(final String code) {
         return countries.stream()
                 .filter(country -> country.getCode().equals(code))
                 .findFirst();
     }
 
-    public List<Object> search(String name) {
+    public List<Object> search(final String contains) {
         final List<Continent> continents = this.continents.keySet().stream()
-                .filter(continent -> continent.getName().contains(name))
+                .filter(continent -> continent.getName().contains(contains))
                 .collect(Collectors.toList());
         final List<Country> countries = this.countries.stream()
-                .filter(country -> country.getName().contains(name))
+                .filter(country -> country.getName().contains(contains))
                 .collect(Collectors.toList());
         final List<Object> results = new ArrayList<>();
         results.addAll(continents);

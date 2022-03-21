@@ -13,12 +13,12 @@ public class SearchResultResolver implements GraphQLQueryResolver {
 
     private final SearchService searchService;
 
-    public SearchResultResolver(SearchService searchService) {
+    public SearchResultResolver(final SearchService searchService) {
         this.searchService = searchService;
     }
 
-    public List<Object> search(String name) {
-        return searchService.search(name);
+    public List<Object> search(final String contains) {
+        return searchService.search(contains);
     }
 
 }

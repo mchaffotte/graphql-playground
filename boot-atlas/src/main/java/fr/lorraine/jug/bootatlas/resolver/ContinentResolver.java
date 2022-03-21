@@ -13,7 +13,7 @@ public class ContinentResolver implements GraphQLResolver<Continent> {
 
     private final CountryRepository countryRepository;
 
-    public ContinentResolver(CountryRepository countryRepository) {
+    public ContinentResolver(final CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }
 

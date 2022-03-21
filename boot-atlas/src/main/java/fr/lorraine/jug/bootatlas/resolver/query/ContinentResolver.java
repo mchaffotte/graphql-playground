@@ -12,11 +12,11 @@ public class ContinentResolver implements GraphQLQueryResolver {
 
     private final ContinentService continentService;
 
-    public ContinentResolver(ContinentService continentService) {
+    public ContinentResolver(final ContinentService continentService) {
         this.continentService = continentService;
     }
 
-    public Continent continent(String name) {
+    public Continent continent(final String name) {
         return continentService.getContinent(name);
     }
 

@@ -14,7 +14,7 @@ public class CountryResolver implements GraphQLQueryResolver {
 
     private final CountryService countryService;
 
-    public CountryResolver(CountryService countryService) {
+    public CountryResolver(final CountryService countryService) {
         this.countryService = countryService;
     }
 
@@ -23,7 +23,7 @@ public class CountryResolver implements GraphQLQueryResolver {
         return countryService.getAllCountries();
     }
 
-    public Country country(String code) {
+    public Country country(final String code) {
         return countryService.getCountry(code);
     }
 

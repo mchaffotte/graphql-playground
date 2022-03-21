@@ -10,11 +10,11 @@ public class SearchService {
 
     private final CountryRepository countryRepository;
 
-    public SearchService(CountryRepository countryRepository) {
+    public SearchService(final CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }
 
-    public List<Object> search(String name) {
-        return this.countryRepository.search(name);
+    public List<Object> search(final String contains) {
+        return this.countryRepository.search(contains);
     }
 }

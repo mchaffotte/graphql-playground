@@ -5,7 +5,7 @@ type Query {
 
     continent(name: String): Continent
 
-    search(name: String): [SearchResult]
+    search(contains: String): [SearchResult]
 
 }
 

@@ -13,11 +13,11 @@ public class ContinentService {
 
     private final CountryRepository countryRepository;
 
-    public ContinentService(CountryRepository countryRepository) {
+    public ContinentService(final CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }
 
-    public Continent getContinent(String name) {
+    public Continent getContinent(final String name) {
         final Optional<Continent> country = countryRepository.getContinent(name);
         return country.orElseThrow(NotFoundException::new);
     }
