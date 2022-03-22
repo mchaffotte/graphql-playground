@@ -89,4 +89,13 @@ public class CountryRepository {
         results.addAll(countries);
         return results;
     }
+
+    public Country saveCountry(final Country newCountry) {
+        countries.add(newCountry);
+        return newCountry;
+    }
+
+    public boolean deleteCountry(final Country country) {
+        return countries.remove(country);
+    }
 }

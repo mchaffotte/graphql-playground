@@ -1,0 +1,7 @@
+input CountryInput {
+    code: ID!
+    name: String!
+    capital: String
+    # must be in square meter
+    area: NonNegativeInt
+}

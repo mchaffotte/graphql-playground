@@ -1,0 +1,5 @@
+type Mutation {
+    addCountry(country: CountryInput): Country
+    deleteCountry(code: ID): Boolean
+}
+
