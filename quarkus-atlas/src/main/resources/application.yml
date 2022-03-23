@@ -1,0 +1,6 @@
+quarkus:
+  smallrye-graphql:
+    error-extension-fields:
+      - exception
+      - code
+      - description
