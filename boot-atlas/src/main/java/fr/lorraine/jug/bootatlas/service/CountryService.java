@@ -4,19 +4,17 @@ import fr.lorraine.jug.bootatlas.domain.Country;
 import fr.lorraine.jug.bootatlas.domain.input.CountryInput;
 import fr.lorraine.jug.bootatlas.exception.NotFoundException;
 import fr.lorraine.jug.bootatlas.repository.CountryRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
 @Component
+@RequiredArgsConstructor
 public class CountryService {
 
     private final CountryRepository countryRepository;
-
-    public CountryService(final CountryRepository countryRepository) {
-        this.countryRepository = countryRepository;
-    }
 
     public List<Country> getAllCountries() {
         return countryRepository.findAll();
