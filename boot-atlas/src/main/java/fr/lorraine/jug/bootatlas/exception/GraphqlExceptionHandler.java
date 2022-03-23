@@ -5,17 +5,17 @@ import graphql.kickstart.spring.error.ThrowableGraphQLError;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.validation.ConstraintViolationException;
+
 @Component
 public class GraphqlExceptionHandler {
 
-    @ExceptionHandler(NotFoundException.class)
-    public ThrowableGraphQLError handle(final NotFoundException nfe) {
+    @ExceptionHandler({
+            NotFoundException.class,
+            GraphqlErrorException.class,
+            ConstraintViolationException.class})
+    public ThrowableGraphQLError handle(final Exception nfe) {
         return new ThrowableGraphQLError(nfe);
-    }
-
-    @ExceptionHandler(GraphqlErrorException.class)
-    public ThrowableGraphQLError handle(final GraphqlErrorException ree) {
-        return new ThrowableGraphQLError(ree);
     }
 
     @ExceptionHandler(RuntimeException.class)
