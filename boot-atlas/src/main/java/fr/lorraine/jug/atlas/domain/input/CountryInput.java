@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas.domain.input;
+package fr.lorraine.jug.atlas.domain.input;
 
 import lombok.Data;
 

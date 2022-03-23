@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas;
+package fr.lorraine.jug.atlas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,9 @@
-package fr.lorraine.jug.bootatlas.service;
+package fr.lorraine.jug.atlas.service;
 
-import fr.lorraine.jug.bootatlas.domain.Country;
-import fr.lorraine.jug.bootatlas.domain.input.CountryInput;
-import fr.lorraine.jug.bootatlas.exception.NotFoundException;
-import fr.lorraine.jug.bootatlas.repository.CountryRepository;
+import fr.lorraine.jug.atlas.domain.Country;
+import fr.lorraine.jug.atlas.domain.input.CountryInput;
+import fr.lorraine.jug.atlas.exception.NotFoundException;
+import fr.lorraine.jug.atlas.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

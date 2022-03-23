@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas.exception;
+package fr.lorraine.jug.atlas.exception;
 
 public class NotFoundException extends RuntimeException {
 

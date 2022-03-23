@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas.config;
+package fr.lorraine.jug.atlas.config;
 
 import graphql.scalars.ExtendedScalars;
 import graphql.schema.GraphQLScalarType;

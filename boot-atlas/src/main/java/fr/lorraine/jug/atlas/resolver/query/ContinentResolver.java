@@ -1,7 +1,7 @@
-package fr.lorraine.jug.bootatlas.resolver.query;
+package fr.lorraine.jug.atlas.resolver.query;
 
-import fr.lorraine.jug.bootatlas.domain.Continent;
-import fr.lorraine.jug.bootatlas.service.ContinentService;
+import fr.lorraine.jug.atlas.domain.Continent;
+import fr.lorraine.jug.atlas.service.ContinentService;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

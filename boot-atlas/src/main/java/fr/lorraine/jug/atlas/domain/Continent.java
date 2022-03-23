@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas.domain;
+package fr.lorraine.jug.atlas.domain;
 
 import lombok.Builder;
 import lombok.Value;

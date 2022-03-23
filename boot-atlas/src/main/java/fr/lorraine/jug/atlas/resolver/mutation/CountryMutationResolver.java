@@ -1,8 +1,8 @@
-package fr.lorraine.jug.bootatlas.resolver.mutation;
+package fr.lorraine.jug.atlas.resolver.mutation;
 
-import fr.lorraine.jug.bootatlas.domain.Country;
-import fr.lorraine.jug.bootatlas.domain.input.CountryInput;
-import fr.lorraine.jug.bootatlas.service.CountryService;
+import fr.lorraine.jug.atlas.domain.Country;
+import fr.lorraine.jug.atlas.domain.input.CountryInput;
+import fr.lorraine.jug.atlas.service.CountryService;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package fr.lorraine.jug.bootatlas.exception;
+package fr.lorraine.jug.atlas.exception;
 
 import graphql.GraphqlErrorException;
 import graphql.kickstart.spring.error.ThrowableGraphQLError;

@@ -1,7 +1,7 @@
-package fr.lorraine.jug.bootatlas.resolver;
+package fr.lorraine.jug.atlas.resolver;
 
-import fr.lorraine.jug.bootatlas.domain.AreaUnit;
-import fr.lorraine.jug.bootatlas.domain.Country;
+import fr.lorraine.jug.atlas.domain.AreaUnit;
+import fr.lorraine.jug.atlas.domain.Country;
 import graphql.kickstart.tools.GraphQLResolver;
 import org.springframework.stereotype.Component;
 

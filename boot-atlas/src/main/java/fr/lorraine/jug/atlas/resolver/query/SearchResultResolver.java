@@ -1,6 +1,6 @@
-package fr.lorraine.jug.bootatlas.resolver.query;
+package fr.lorraine.jug.atlas.resolver.query;
 
-import fr.lorraine.jug.bootatlas.service.SearchService;
+import fr.lorraine.jug.atlas.service.SearchService;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

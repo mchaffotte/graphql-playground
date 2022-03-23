@@ -1,8 +1,8 @@
-package fr.lorraine.jug.bootatlas.resolver;
+package fr.lorraine.jug.atlas.resolver;
 
-import fr.lorraine.jug.bootatlas.domain.Continent;
-import fr.lorraine.jug.bootatlas.domain.Country;
-import fr.lorraine.jug.bootatlas.repository.CountryRepository;
+import fr.lorraine.jug.atlas.domain.Continent;
+import fr.lorraine.jug.atlas.domain.Country;
+import fr.lorraine.jug.atlas.repository.CountryRepository;
 import graphql.kickstart.tools.GraphQLResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
