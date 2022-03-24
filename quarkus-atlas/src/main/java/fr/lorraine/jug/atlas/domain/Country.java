@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Builder
 @Value
-public class Country {
+public class Country implements SearchResult {
 
     String code;
 

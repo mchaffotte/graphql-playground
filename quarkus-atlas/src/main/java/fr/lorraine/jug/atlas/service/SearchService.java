@@ -1,5 +1,6 @@
 package fr.lorraine.jug.atlas.service;
 
+import fr.lorraine.jug.atlas.domain.SearchResult;
 import fr.lorraine.jug.atlas.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
 
@@ -12,7 +13,7 @@ public class SearchService {
 
     private final CountryRepository countryRepository;
 
-    public List<Object> search(final String contains) {
+    public List<SearchResult> search(final String contains) {
         return this.countryRepository.search(contains);
     }
 }

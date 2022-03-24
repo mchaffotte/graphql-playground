@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Builder
 @Value
-public class Continent {
+public class Continent implements SearchResult {
 
     String name;
 

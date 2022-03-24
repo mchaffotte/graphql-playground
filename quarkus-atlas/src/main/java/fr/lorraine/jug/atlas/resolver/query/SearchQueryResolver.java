@@ -1,5 +1,6 @@
 package fr.lorraine.jug.atlas.resolver.query;
 
+import fr.lorraine.jug.atlas.domain.SearchResult;
 import fr.lorraine.jug.atlas.service.SearchService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +16,8 @@ public class SearchQueryResolver {
 
     private final SearchService searchService;
 
-    //@Query
-    public List<Object> getSearch(String name) {
+    @Query
+    public List<SearchResult> getSearch(String name) {
         return searchService.search(name);
     }
 }

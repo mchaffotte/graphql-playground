@@ -2,6 +2,7 @@ package fr.lorraine.jug.atlas.repository;
 
 import fr.lorraine.jug.atlas.domain.Continent;
 import fr.lorraine.jug.atlas.domain.Country;
+import fr.lorraine.jug.atlas.domain.SearchResult;
 import fr.lorraine.jug.atlas.exception.NotFoundException;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -77,14 +78,14 @@ public class CountryRepository {
                 .findFirst();
     }
 
-    public List<Object> search(final String contains) {
+    public List<SearchResult> search(final String contains) {
         final List<Continent> continents = this.continents.keySet().stream()
                 .filter(continent -> continent.getName().contains(contains))
                 .collect(Collectors.toList());
         final List<Country> countries = this.countries.stream()
                 .filter(country -> country.getName().contains(contains))
                 .collect(Collectors.toList());
-        final List<Object> results = new ArrayList<>();
+        final List<SearchResult> results = new ArrayList<>();
         results.addAll(continents);
         results.addAll(countries);
         return results;
