@@ -1,0 +1,6 @@
+mutation {
+    addCountry(country: {code: "BR", name: "Brésil", capital:"Brasilia", area: 8547404}) {
+        name
+        area(unit: SQUARE_MILE)
+    }
+}

@@ -1,0 +1,7 @@
+{
+    country(code: "FR") {
+        code
+        name
+        capital
+    }
+}

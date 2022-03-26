@@ -2,10 +2,14 @@ enum AreaUnit {
     SQUARE_METER, SQUARE_MILE
 }
 
+# Pays
 type Country {
+    # Code ISO 3166-1
     code: ID!
+    # Nom
     name: String!
+    # Nom de la capital
     capital: String
+    # Superficie totale
     area(unit: AreaUnit = SQUARE_METER): Int
 }
-
