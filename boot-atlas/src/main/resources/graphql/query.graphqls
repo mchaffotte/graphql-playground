@@ -3,6 +3,8 @@ type Query {
 
     country(code: ID): Country
 
+    continents: [Continent]
+
     continent(name: String): Continent
 
     search(contains: String): [SearchResult]

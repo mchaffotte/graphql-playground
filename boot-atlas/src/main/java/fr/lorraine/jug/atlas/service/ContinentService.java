@@ -6,6 +6,7 @@ import fr.lorraine.jug.atlas.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -17,5 +18,9 @@ public class ContinentService {
     public Continent getContinent(final String name) {
         final Optional<Continent> country = countryRepository.getContinent(name);
         return country.orElseThrow(NotFoundException::new);
+    }
+
+    public List<Continent> getContinents() {
+        return countryRepository.getContinents();
     }
 }

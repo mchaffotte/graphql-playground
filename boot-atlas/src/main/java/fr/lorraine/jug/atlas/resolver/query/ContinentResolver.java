@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Slf4j
 @Component("ContinentQueryResolver")
 @RequiredArgsConstructor
@@ -16,6 +18,10 @@ public class ContinentResolver implements GraphQLQueryResolver {
 
     public Continent continent(final String name) {
         return continentService.getContinent(name);
+    }
+
+    public List<Continent> continents() {
+        return continentService.getContinents();
     }
 
 }
