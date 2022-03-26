@@ -29,7 +29,7 @@ public class CountryResolver implements GraphQLResolver<Country> {
 
 //    public CompletableFuture<Long> area(final Country country, final AreaUnit unit, final DataFetchingEnvironment environment) {
 //        final DataLoader<String, Long> dataLoader = environment.getDataLoader(DataLoaderRegistryFactory.AREA_DATA_LOADER);
-//        return dataLoader.load(country.getCode());
+//        return dataLoader.load(country.getCode(), CountryContext.builder().country(country).unit(unit).build());
 //    }
 
 //    public DataFetcherResult<Long> area(final Country country, final AreaUnit unit) {

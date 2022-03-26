@@ -7,6 +7,7 @@ import org.dataloader.DataLoaderFactory;
 import org.dataloader.DataLoaderRegistry;
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -20,16 +21,16 @@ public class DataLoaderRegistryFactory {
 
     private final AreaService areaService;
 
-    public DataLoaderRegistry create(final String userId) {
+    public DataLoaderRegistry create() {
         final DataLoaderRegistry registry = new DataLoaderRegistry();
-        registry.register(AREA_DATA_LOADER, createAreaDataLoader(userId));
+        registry.register(AREA_DATA_LOADER, createAreaDataLoader());
         return registry;
     }
 
-    private DataLoader<String,Long> createAreaDataLoader(final String userId) {
-        return DataLoaderFactory.newMappedDataLoader(countryCodes ->
+    private DataLoader<String,Long> createAreaDataLoader() {
+        return DataLoaderFactory.newMappedDataLoader((countryCodes, environment) ->
                 CompletableFuture.supplyAsync(() ->
-                        areaService.getAreaFor(countryCodes, userId),
+                        areaService.getAreaFor((Map) environment.getKeyContexts()),
                         areaThreadPool));
     }
 }
