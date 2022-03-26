@@ -3,7 +3,7 @@ type Query {
 
     country(code: ID): Country
 
-    continents: [Continent]
+    continents(first: Int!, after: String): ContinentConnection @connection (for: "Continent")
 
     continent(name: String): Continent
 

@@ -5,12 +5,12 @@ import fr.lorraine.jug.atlas.domain.input.CountryInput;
 import fr.lorraine.jug.atlas.exception.NotFoundException;
 import fr.lorraine.jug.atlas.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class CountryService {
 

@@ -2,11 +2,11 @@ package fr.lorraine.jug.atlas.service;
 
 import fr.lorraine.jug.atlas.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class SearchService {
 

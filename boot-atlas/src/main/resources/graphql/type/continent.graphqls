@@ -1,4 +1,5 @@
 type Continent {
+    id: ID!
     name: String!
     countries(
         first: Int
